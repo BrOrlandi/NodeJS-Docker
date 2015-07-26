@@ -8,13 +8,12 @@ This Docker image supports:
 
 
 ## Running
-Your need to create at least two volumes. One directory for your application files and a shellscript named `compile.sh` used as volume on the path `/compile.sh`.
-In that script put the commands you need to get your application running.
+Your need to create at least two volumes. One directory for your application files and other one for script files on the path `/scripts`. The scripts directory must have a `run.sh` in that script put the commands you need to get your application running.
 The container will expose the port `8000`.
 
-For instance you can create a volume with these commands:
+For instance you can create a script with these commands:
 ``` sh 
-cd /node_application
+cd /apps/myapp
 bower install --config.interactive=false --allow-root
 npm install
 gulp compile

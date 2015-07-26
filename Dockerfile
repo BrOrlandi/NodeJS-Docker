@@ -10,6 +10,5 @@ RUN npm install -g gulp
 RUN npm install -g coffee-script
 RUN npm install -g pm2
 
-
-CMD ["/compile.sh"]
+CMD ["sh /scripts/compile.sh"]
 

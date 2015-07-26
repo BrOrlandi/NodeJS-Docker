@@ -10,5 +10,9 @@ RUN npm install -g gulp
 RUN npm install -g coffee-script
 RUN npm install -g pm2
 
-CMD ["sh /scripts/run.sh"]
+VOLUME /scripts
+ADD run.sh /scripts/run.sh
+RUN chmod +x /scripts/run.sh
+
+CMD /scripts/run.sh
 
